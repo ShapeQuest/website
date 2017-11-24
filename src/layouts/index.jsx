@@ -4,6 +4,8 @@ import Helmet from "react-helmet";
 import "spectre.css/dist/spectre.min.css";
 import "spectre.css/dist/spectre-exp.min.css";
 import "./index.css";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 function TemplateWrapper({ children }) {
   return (
@@ -18,7 +20,9 @@ function TemplateWrapper({ children }) {
           }
         ]}
       />
+      <Header />
       <div>{children()}</div>
+      <Footer />
     </div>
   );
 }
