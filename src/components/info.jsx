@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { INFO } from "../data";
 
 function Column({ number, title, description }) {
   return (
-    <div className="column col-4 col-xs-12">
+    <div className="column col-4 col-xs-12 col-sm-12 col-md-12">
       <h4>{number}</h4>
       <h3>{title}</h3>
       <p>{description}</p>
@@ -21,21 +22,7 @@ function Info() {
   return (
     <div className="container">
       <div className="columns text-center">
-        <Column
-          number="15"
-          title="Exciting levels"
-          description="Play through handcrafted chapters, full of enemies and obstacles"
-        />
-        <Column
-          number="12"
-          title="Unique abilities"
-          description="Use powerful skills to complete levels"
-        />
-        <Column
-          number="3"
-          title="Ways of steering"
-          description="Control Vikk with tilt, joystick or buttons"
-        />
+        {INFO.map(info => <Column {...info} />)}
       </div>
     </div>
   );

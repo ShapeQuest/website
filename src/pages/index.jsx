@@ -8,7 +8,7 @@ import Skills from "../components/skills";
 function IndexPage() {
   return (
     <div>
-      <Video src="https://www.youtube.com/embed/f-VGyZFygd8?showinfo=0&controls=0&rel=0&modestbranding=1" />
+      <Video id="f-VGyZFygd8" />
       <Info />
       <GameModes />
       <Screenshots />
