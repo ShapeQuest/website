@@ -1,46 +1,37 @@
 import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-const ENEMIES = [
-  {
-    name: "Imp",
-    imageName: "imp",
-    description: "The simplest Minion of Zorg"
-  },
-  {
-    name: "Joker",
-    imageName: "joker",
-    description: "Beware, he might pull some tricks on you!"
-  },
-  {
-    name: "Bomber",
-    imageName: "bomber",
-    description: "3... 2... 1... BOOM!"
-  },
-  {
-    name: "Arma",
-    imageName: "arma",
-    description: "Explode all at once!"
-  },
-  {
-    name: "Jumper",
-    imageName: "jumper",
-    description: "Don't even try to catch him..."
-  },
-  {
-    name: "Ninja",
-    imageName: "ninja",
-    description: "Strikes from the shadows"
-  }
-];
+import { ENEMIES } from "../data";
 
-class Enemies extends Component {
-  state = {
-    enemies: ENEMIES,
-    selectedEnemy: ENEMIES[0]
-  };
-
-  render() {
-    const { enemies, selectedEnemy } = this.state;
-    return <div className="container">{selectedEnemy}</div>;
-  }
+function Enemy({ name, imageName, description }) {
+  return (
+    <div className="tile column col-4 col-xs-12 col-sm-12 col-md-4 col-lg-2">
+      <div className="tile-icon">
+        <img alt={name} src={`images/bestiary/${imageName}.png`} />
+      </div>
+      <div className="tile-content">
+        <p className="tile-title">{name}</p>
+        <p className="tile-subtitle text-gray">{description}</p>
+      </div>
+    </div>
+  );
 }
+
+Enemy.propTypes = {
+  name: PropTypes.string.isRequired,
+  imageName: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
+};
+
+function Enemies() {
+  return (
+    <div className="container">
+      <div className="columns">
+        {ENEMIES.map(enemy => <Enemy {...enemy} />)}
+      </div>
+    </div>
+  );
+}
+
+export default Enemies;

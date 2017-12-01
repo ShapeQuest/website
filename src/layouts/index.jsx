@@ -21,7 +21,7 @@ function TemplateWrapper({ children }) {
         ]}
       />
       <Header />
-      <div>{children()}</div>
+      <div className="container">{children()}</div>
       <Footer />
     </div>
   );

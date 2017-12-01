@@ -110,3 +110,69 @@ export const INFO = [
     description: "Control Vikk with tilt, joystick or buttons"
   }
 ];
+
+export const ENEMIES = [
+  {
+    name: "Imp",
+    imageName: "imp",
+    description: "The simplest Minion of Zorg"
+  },
+  {
+    name: "Joker",
+    imageName: "joker",
+    description: "Beware, he might pull some tricks on you!"
+  },
+  {
+    name: "Bomber",
+    imageName: "bomber",
+    description: "3... 2... 1... BOOM!"
+  },
+  {
+    name: "Arma",
+    imageName: "arma",
+    description: "Explode all at once!"
+  },
+  {
+    name: "Jumper",
+    imageName: "jumper",
+    description: "Don't even try to catch him..."
+  },
+  {
+    name: "Ninja",
+    imageName: "ninja",
+    description: "Strikes from the shadows"
+  }
+];
+
+export const GAME_MODES = [
+  {
+    title: "Campaign",
+    description: "Fight with Zorg’s minions in 3 chapters of amazing adventure",
+    list: [
+      "advance through increasingly difficult handmade levels",
+      "gain power by saving Zippies",
+      "use Vikk’s special abilities",
+      "unlock various achievements"
+    ]
+  },
+  {
+    title: "Arena",
+    description: "Compete with other players in an endless Arena mode!",
+    list: [
+      "gather points to climb up the ranking!",
+      "each stage is generated randomly – and getting harder and harder",
+      "use Vikk’s abilities wisely",
+      "collect special Powerups to refill abilities"
+    ]
+  },
+  {
+    title: "Rapid",
+    description: "Challenge your reflex in 8 stages of Rapid mode!",
+    list: [
+      "with each stage Vikk is moving faster and faster",
+      "stages are generated randomly",
+      "gain additional SkillPoints for each completed stage",
+      "you can’t use Vikk’s abilities here – use your reflex to maneuver around enemies"
+    ]
+  }
+];

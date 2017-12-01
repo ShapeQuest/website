@@ -7,20 +7,20 @@ function Input({ id, selected }) {
       type="radio"
       id={`slide-${id}`}
       name="carousel-radio"
-      hidden={true}
+      hidden="true"
       className="carousel-locator"
       checked={selected}
     />
   );
 }
 Input.defaultProps = {
-  selected: false,
-}
+  selected: false
+};
 
 Input.propTypes = {
   id: PropTypes.string.isRequired,
-  selected: PropTypes.bool,
-}
+  selected: PropTypes.bool
+};
 
 function NavItem({ id }) {
   return (
@@ -31,19 +31,19 @@ function NavItem({ id }) {
 }
 
 NavItem.propTypes = {
-  id: PropTypes.string.isRequired,
-}
+  id: PropTypes.string.isRequired
+};
 
 function Item({ id, alt }) {
   const src = `images/gallery/gallery${id}.png`;
   return (
     <figure className="carousel-item">
-      <label className="item-prev btn btn-action btn-lg" htmlFor="slide-4">
+      {/* <label className="item-prev btn btn-action btn-lg" htmlFor="slide-4">
         <i className="icon icon-arrow-left" />
       </label>
       <label className="item-next btn btn-action btn-lg" htmlFor="slide-2">
         <i className="icon icon-arrow-right" />
-      </label>
+      </label> */}
       <img src={src} className="img-responsive rounded" alt={alt} />
     </figure>
   );

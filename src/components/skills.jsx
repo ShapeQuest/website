@@ -5,8 +5,8 @@ import Video from "./video";
 import { OFFENSIVE, DEFENSIVE, SKILLS } from "../data";
 
 const StyledSkillIcon = styled.img`
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   cursor: pointer;
   margin: 0.1rem;
 `;
@@ -35,7 +35,6 @@ class Skills extends Component {
   }
 
   selectSkill(skill) {
-    console.log("test");
     this.setState({
       skill
     });
@@ -59,6 +58,11 @@ class Skills extends Component {
     return (
       <div className="container text-center">
         <div>
+          <Video id={video} title={name} />
+          <h4>{name}</h4>
+          <p>{description}</p>
+        </div>
+        <div>
           <button
             className="btn"
             onClick={() => this.changeCategory(OFFENSIVE)}
@@ -73,11 +77,6 @@ class Skills extends Component {
           </button>
         </div>
         {listOfSkills}
-        <div>
-          <h1>{name}</h1>
-          <p>{description}</p>
-          <Video id={video} />
-        </div>
       </div>
     );
   }

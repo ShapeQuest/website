@@ -22,7 +22,7 @@ function Info() {
   return (
     <div className="container">
       <div className="columns text-center">
-        {INFO.map(info => <Column {...info} />)}
+        {INFO.map(info => <Column key={info.title} {...info} />)}
       </div>
     </div>
   );
