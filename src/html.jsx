@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import favicon from "../static/images/favicon.ico";
 
 const isProduction = process.env.NODE_ENV === "production";
@@ -12,9 +13,7 @@ if (isProduction) {
   }
 }
 
-function HTML(props) {
-  const { headComponents, preBodyComponents, body, postBodyComponents } = props;
-
+function HTML({ headComponents, preBodyComponents, body, postBodyComponents }) {
   const css = isProduction && (
     <style
       id="gatsby-inlined-css"
@@ -37,7 +36,7 @@ function HTML(props) {
         />
         <title>ShapeQuest</title>
         <link
-          href="https://fonts.googleapis.com/css?family=Roboto+Condensed"
+          href="https://fonts.googleapis.com/css?family=Quicksand"
           rel="stylesheet"
         />
         <link rel="shortcut icon" href={favicon} />
@@ -56,5 +55,12 @@ function HTML(props) {
     </html>
   );
 }
+
+HTML.propTypes = {
+  headComponents: PropTypes.node.isRequired,
+  preBodyComponents: PropTypes.node.isRequired,
+  body: PropTypes.node.isRequired,
+  postBodyComponents: PropTypes.node.isRequired
+};
 
 export default HTML;

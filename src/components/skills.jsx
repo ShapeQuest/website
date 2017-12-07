@@ -21,6 +21,20 @@ SkillIcon.propTypes = {
   active: PropTypes.bool.isRequired
 };
 
+const StyledCategoryButton = styled.button`
+  background-color: #ececec !important;
+  color: #333 !important;
+  border-color: #888 !important;
+`;
+
+function CategoryButton({ value, onClick }) {
+  return (
+    <StyledCategoryButton className="btn" onClick={onClick}>
+      {value}
+    </StyledCategoryButton>
+  );
+}
+
 class Skills extends Component {
   state = {
     selectedCategory: OFFENSIVE,
@@ -44,16 +58,14 @@ class Skills extends Component {
     const { selectedCategory, skills, skill } = this.state;
     const { name, description, video } = skill;
 
-    const listOfSkills = skills
-      .filter(({ category }) => category === selectedCategory)
-      .map(skill => (
-        <SkillIcon
-          key={skill.file}
-          onClick={() => this.selectSkill(skill)}
-          active={skill.name === name}
-          file={skill.file}
-        />
-      ));
+    const listOfSkills = skills.map(skill => (
+      <SkillIcon
+        key={skill.file}
+        onClick={() => this.selectSkill(skill)}
+        active={skill.name === name}
+        file={skill.file}
+      />
+    ));
 
     return (
       <div className="container text-center">
@@ -61,20 +73,6 @@ class Skills extends Component {
           <Video id={video} title={name} />
           <h4>{name}</h4>
           <p>{description}</p>
-        </div>
-        <div>
-          <button
-            className="btn"
-            onClick={() => this.changeCategory(OFFENSIVE)}
-          >
-            {OFFENSIVE}
-          </button>
-          <button
-            className="btn"
-            onClick={() => this.changeCategory(DEFENSIVE)}
-          >
-            {DEFENSIVE}
-          </button>
         </div>
         {listOfSkills}
       </div>

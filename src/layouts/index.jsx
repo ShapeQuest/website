@@ -28,7 +28,7 @@ function TemplateWrapper({ children }) {
 }
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func
+  children: PropTypes.func.isRequired,
 };
 
 export default TemplateWrapper;

@@ -12,6 +12,11 @@ import Enemies from "../components/enemies";
 const StyledSection = styled.div`
   margin: 2rem;
   padding: 1rem;
+
+  @media (max-width: 700px) {
+    margin: 1rem;
+    padding: 0;
+  }
 `;
 
 function Section({ title, children }) {

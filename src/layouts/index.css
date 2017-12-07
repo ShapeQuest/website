@@ -1,7 +1,10 @@
 html, body {
   background-color: #000;
-  color: #CFCFD0;
-  font-family: 'Roboto Condensed', sans-serif;
+  color: #ececec; 
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
 }
 
 a {

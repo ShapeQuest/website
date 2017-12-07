@@ -17,7 +17,7 @@ function Header() {
           alt="logo"
         />
       </Link>
-      <h3 className="text-center">Fast-paced mobile action game</h3>
+      <h2 className="text-center">Fast-paced mobile action game</h2>
     </StyledHeader>
   );
 }
