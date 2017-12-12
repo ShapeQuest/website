@@ -1,6 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import { ENEMIES } from "../data";
+
+const propTypes = {
+  name: PropTypes.string.isRequired,
+  imageName: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 function Enemy({ name, imageName, description }) {
   return (
@@ -16,11 +23,7 @@ function Enemy({ name, imageName, description }) {
   );
 }
 
-Enemy.propTypes = {
-  name: PropTypes.string.isRequired,
-  imageName: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
-};
+Enemy.propTypes = propTypes;
 
 function Enemies() {
   return (

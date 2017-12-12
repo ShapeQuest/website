@@ -1,45 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
 
+import Section from "../components/section";
 import Video from "../components/video";
 import Info from "../components/info";
 import GameModes from "../components/gameModes";
 import Screenshots from "../components/screenshots";
 import Skills from "../components/skills";
 import Enemies from "../components/enemies";
-
-const StyledSection = styled.div`
-  margin: 2rem;
-  padding: 1rem;
-
-  @media (max-width: 700px) {
-    margin: 1rem;
-    padding: 0;
-  }
-`;
-
-function Section({ title, children }) {
-  return (
-    <StyledSection>
-      {title && <h2 className="text-center">{title}</h2>}
-      {children}
-    </StyledSection>
-  );
-}
-
-Section.defaultProps = {
-  title: ""
-};
-
-Section.propTypes = {
-  title: PropTypes.string,
-  children: PropTypes.node.isRequired
-};
+import Badge from "../components/badge";
+import badgeSrc from "../../static/images/badge.png";
 
 function IndexPage() {
   return (
     <div>
+      <Badge src={badgeSrc} alt="android badge" />
       <Video id="f-VGyZFygd8" title="Intro" />
       <Section>
         <Info />

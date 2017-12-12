@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import Carousel from "nuka-carousel";
 
+const propTypes = {
+  id: PropTypes.string.isRequired,
+};
+
 function Screenshot({ id }) {
   return (
     <img
@@ -12,9 +16,7 @@ function Screenshot({ id }) {
   );
 }
 
-Screenshot.propTypes = {
-  id: PropTypes.string.isRequired
-};
+Screenshot.propTypes = propTypes;
 
 function Screenshots() {
   return (

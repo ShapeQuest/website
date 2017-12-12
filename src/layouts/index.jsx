@@ -1,25 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
 import "spectre.css/dist/spectre.min.css";
 import "spectre.css/dist/spectre-exp.min.css";
 import "./index.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
+const propTypes = {
+  children: PropTypes.func.isRequired,
+};
+
 function TemplateWrapper({ children }) {
   return (
     <div>
-      <Helmet
-        title="ShapeQuest"
-        meta={[
-          { name: "description", content: "Fast-paced mobile action game" },
-          {
-            name: "keywords",
-            content: "shapequest, android, mobile, game, fast-pased"
-          }
-        ]}
-      />
       <Header />
       <div className="container">{children()}</div>
       <Footer />
@@ -27,8 +20,6 @@ function TemplateWrapper({ children }) {
   );
 }
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func.isRequired,
-};
+TemplateWrapper.propTypes = propTypes;
 
 export default TemplateWrapper;

@@ -9,6 +9,12 @@ const StyledNumber = styled.h4`
   font-size: 3rem;
 `;
 
+const propTypes = {
+  number: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
+
 function Column({ number, title, description }) {
   return (
     <div className="column col-4 col-xs-12 col-sm-12 col-md-12">
@@ -19,11 +25,7 @@ function Column({ number, title, description }) {
   );
 }
 
-Column.propTypes = {
-  number: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
-};
+Column.propTypes = propTypes;
 
 function Info() {
   return (

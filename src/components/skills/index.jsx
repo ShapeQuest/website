@@ -1,56 +1,30 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Video from "./video";
-import { OFFENSIVE, DEFENSIVE, SKILLS } from "../data";
+import SkillIcon from "./skillIcon";
+import Video from "../video";
+import { OFFENSIVE, DEFENSIVE, SKILLS } from "../../data";
 
-const StyledSkillIcon = styled.img`
-  width: 4rem;
-  height: 4rem;
-  cursor: pointer;
-  margin: 0.1rem;
+const Name = styled.h4`
+  margin-top: 1rem;
 `;
-
-function SkillIcon({ file, active, onClick }) {
-  const src = `images/skills/${file}${active ? "2" : ""}.png`;
-  return <StyledSkillIcon onClick={onClick} src={src} />;
-}
-
-SkillIcon.propTypes = {
-  file: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired
-};
-
-const StyledCategoryButton = styled.button`
-  background-color: #ececec !important;
-  color: #333 !important;
-  border-color: #888 !important;
-`;
-
-function CategoryButton({ value, onClick }) {
-  return (
-    <StyledCategoryButton className="btn" onClick={onClick}>
-      {value}
-    </StyledCategoryButton>
-  );
-}
 
 class Skills extends Component {
   state = {
     selectedCategory: OFFENSIVE,
     skills: SKILLS,
-    skill: SKILLS[0]
+    skill: SKILLS[0],
   };
 
   changeCategory(category) {
     this.setState({
-      selectedCategory: category
+      selectedCategory: category,
     });
   }
 
   selectSkill(skill) {
     this.setState({
-      skill
+      skill,
     });
   }
 
@@ -71,7 +45,7 @@ class Skills extends Component {
       <div className="container text-center">
         <div>
           <Video id={video} title={name} />
-          <h4>{name}</h4>
+          <Name>{name}</Name>
           <p>{description}</p>
         </div>
         {listOfSkills}

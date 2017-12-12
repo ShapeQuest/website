@@ -13,6 +13,13 @@ if (isProduction) {
   }
 }
 
+const propTypes = {
+  headComponents: PropTypes.node.isRequired,
+  preBodyComponents: PropTypes.node.isRequired,
+  body: PropTypes.node.isRequired,
+  postBodyComponents: PropTypes.node.isRequired,
+};
+
 function HTML({ headComponents, preBodyComponents, body, postBodyComponents }) {
   const css = isProduction && (
     <style
@@ -33,6 +40,10 @@ function HTML({ headComponents, preBodyComponents, body, postBodyComponents }) {
         <meta
           name="description"
           content="Website for ShapeQuest - fast paced mobile action game"
+        />
+        <meta
+          name="keywords"
+          content="shapequest, android, mobile, game, fast-pased"
         />
         <title>ShapeQuest</title>
         <link
@@ -56,11 +67,6 @@ function HTML({ headComponents, preBodyComponents, body, postBodyComponents }) {
   );
 }
 
-HTML.propTypes = {
-  headComponents: PropTypes.node.isRequired,
-  preBodyComponents: PropTypes.node.isRequired,
-  body: PropTypes.node.isRequired,
-  postBodyComponents: PropTypes.node.isRequired
-};
+HTML.propTypes = propTypes;
 
 export default HTML;

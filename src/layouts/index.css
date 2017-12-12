@@ -15,3 +15,7 @@ a {
 a:hover {
   color: inherit;
 }
+
+a:visited {
+  color: #2e9fd3;
+}
