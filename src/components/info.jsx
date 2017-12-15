@@ -7,6 +7,7 @@ import { INFO } from "../data";
 const StyledNumber = styled.h4`
   color: #2d74b2;
   font-size: 3rem;
+  font-weight: 700;
 `;
 
 const propTypes = {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledLink = styled.a`
   margin-left: 0.2rem;
-`
+`;
 
 function LicensesPage() {
   return (
@@ -11,15 +11,20 @@ function LicensesPage() {
       <h1>Licenses</h1>
       <ul>
         <li>
-          Framework - <StyledLink href="https://libgdx.badlogicgames.com/">libGDX</StyledLink> -
-          Apache 2.0
+          Framework -{" "}
+          <StyledLink href="https://libgdx.badlogicgames.com/">
+            libGDX
+          </StyledLink>{" "}
+          - Apache 2.0
         </li>
         <li>
-          Physics engine - <StyledLink href="http://box2d.org/">Box2D</StyledLink> - zlib license
+          Physics engine -{" "}
+          <StyledLink href="http://box2d.org/">Box2D</StyledLink> - zlib license
         </li>
         <li>
-          Skill icons - <StyledLink href="http://game-icons.net/">game-icons.net</StyledLink> - CC
-          BY 3.0 - all icons were reworked
+          Skill icons -{" "}
+          <StyledLink href="http://game-icons.net/">game-icons.net</StyledLink>{" "}
+          - CC BY 3.0 - all icons were reworked
         </li>
         <li>
           Skin -{" "}
@@ -29,10 +34,10 @@ function LicensesPage() {
           - CC BY 4.0 - reworked and customized
         </li>
         <li>
-          Other - <StyledLink href="https://www.gimp.org/">GIMP</StyledLink>, 
-          <StyledLink href="https://inkscape.org/en/">Inkscape</StyledLink>, 
-          <StyledLink href="http://www.audacityteam.org/">Audacity</StyledLink>, 
-          <StyledLink href="http://jfxr.frozenfractal.com/">jfxr</StyledLink>   
+          Other - <StyledLink href="https://www.gimp.org/">GIMP</StyledLink>,
+          <StyledLink href="https://inkscape.org/en/">Inkscape</StyledLink>,
+          <StyledLink href="http://www.audacityteam.org/">Audacity</StyledLink>,
+          <StyledLink href="http://jfxr.frozenfractal.com/">jfxr</StyledLink>
         </li>
       </ul>
 

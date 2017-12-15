@@ -7,6 +7,11 @@ const StyledSkillIcon = styled.img`
   height: 4rem;
   cursor: pointer;
   margin: 0.1rem;
+
+  @media only screen and (max-width: 500px) {
+    width: 3rem;
+    height: 3rem;
+  }
 `;
 
 const propTypes = {

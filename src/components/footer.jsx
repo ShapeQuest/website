@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import facebookLogo from "../../static/images/fb.png";
 
 function Footer() {
   return (
@@ -10,7 +11,13 @@ function Footer() {
       <br /> Website created by{" "}
       <a href="http://michalczmiel.me">Michał Czmiel</a>
       <br />
-      <Link to="/licenses">used licenses</Link>
+      <Link href="" to="/licenses">
+        used licenses
+      </Link>
+      <br />
+      <a href="https://www.facebook.com/theshapequest/">
+        <img src={facebookLogo} />
+      </a>
     </footer>
   );
 }
