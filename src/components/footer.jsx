@@ -7,7 +7,7 @@ function Footer() {
     <footer className="text-center">
       ShapeQuest @2017 | theshapequest@gmail.com
       <br /> Game developed by{" "}
-      <a href="http://michalczmiel.me">Aleksander Woźniak</a>
+      <a href="https://github.com/aleksanderwozniak">Aleksander Woźniak</a>
       <br /> Website created by{" "}
       <a href="http://michalczmiel.me">Michał Czmiel</a>
       <br />
