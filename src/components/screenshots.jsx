@@ -1,59 +1,33 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
+import Carousel from "nuka-carousel";
 
-function Input({ id, selected }) {
+const propTypes = {
+  id: PropTypes.string.isRequired,
+};
+
+function Screenshot({ id }) {
   return (
-    <input
-      type="radio"
-      id={`slide-${id}`}
-      name="carousel-radio"
-      hidden={true}
-      className="carousel-locator"
-      checked={selected}
+    <img
+      className="img-responsive"
+      alt="screenshot"
+      src={`images/gallery/${id}.png`}
     />
   );
 }
 
-function NavItem({ id }) {
+Screenshot.propTypes = propTypes;
+
+function Screenshots() {
   return (
-    <label className="nav-item text-hide c-hand" htmlFor={`slide-${id}`}>
-      {id}
-    </label>
+    <Carousel>
+      <Screenshot id="1" />
+      <Screenshot id="2" />
+      <Screenshot id="3" />
+      <Screenshot id="4" />
+      <Screenshot id="5" />
+    </Carousel>
   );
-}
-
-function Item({ src, alt }) {
-  return (
-    <figure className="carousel-item">
-      {/* <label className="item-prev btn btn-action btn-lg" htmlFor="slide-4">
-        <i className="icon icon-arrow-left" />
-      </label>
-      <label className="item-next btn btn-action btn-lg" htmlFor="slide-2">
-        <i className="icon icon-arrow-right" />
-      </label> */}
-      <img src={src} className="img-responsive rounded" alt={alt} />
-    </figure>
-  );
-}
-
-class Screenshots extends Component {
-  render() {
-    return (
-      <div className="carousel">
-        <Input id="1" selected />
-        <Input id="2" />
-
-        <div className="carousel-container">
-          <Item src="images/gallery/gallery1.png" />
-          <Item src="images/gallery/gallery2.png" />
-        </div>
-
-        <div className="carousel-nav">
-          <NavItem id="1" />
-          <NavItem id="2" />
-        </div>
-      </div>
-    );
-  }
 }
 
 export default Screenshots;

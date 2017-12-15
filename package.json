@@ -5,14 +5,16 @@
   "author": "Michał Czmiel <michalczmiel@outlook.com>",
   "private": true,
   "dependencies": {
-    "gatsby": "^1.9.119",
-    "gatsby-link": "^1.6.28",
-    "gatsby-plugin-react-helmet": "^2.0.1",
-    "gatsby-plugin-sitemap": "^1.2.5",
-    "gatsby-plugin-styled-components": "^2.0.2",
-    "react-helmet": "^5.2.0",
-    "spectre.css": "^0.4.6",
-    "styled-components": "^2.2.3"
+    "gatsby": "^1.9.135",
+    "gatsby-link": "^1.6.32",
+    "gatsby-plugin-nprogress": "^1.0.9",
+    "gatsby-plugin-offline": "^1.0.12",
+    "gatsby-plugin-purify-css": "^2.2.1",
+    "gatsby-plugin-sitemap": "^1.2.7",
+    "gatsby-plugin-styled-components": "^2.0.4",
+    "nuka-carousel": "^3.0.0",
+    "spectre.css": "^0.5.0",
+    "styled-components": "^2.3.0"
   },
   "keywords": [
     "gatsby"
@@ -22,15 +24,15 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}"
+    "format": "prettier --write --trailing-comma=es5 src/**/*.{js,jsx}"
   },
   "devDependencies": {
-    "eslint": "^4.11.0",
+    "eslint": "^4.13.1",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-config-prettier": "^2.8.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
-    "prettier": "^1.8.2"
+    "prettier": "^1.9.2"
   }
 }

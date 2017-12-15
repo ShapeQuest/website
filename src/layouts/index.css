@@ -1,4 +1,21 @@
 html, body {
   background-color: #000;
-  color: #CFCFD0;
+  color: #ececec; 
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+a {
+  cursor: pointer;
+  color: #2e9fd3
+}
+
+a:hover {
+  color: inherit;
+}
+
+a:visited {
+  color: #2e9fd3;
 }
