@@ -11,7 +11,6 @@ const Name = styled.h4`
 
 const GroupTitle = styled.p`
   color: #2d74b2;
-  font-weight: 700;
   text-transform: uppercase;
 `;
 

@@ -6,7 +6,7 @@ import { GAME_MODES } from "../data";
 
 const StyledDescription = styled.h5`
   color: #2d74b2;
-  font-weight: 700;
+  margin-top: 0;
 `;
 
 const propTypes = {
