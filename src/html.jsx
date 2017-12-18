@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import favicon from "../static/images/favicon.ico";
+import ogImage from "../static/images/og-image.png";
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -46,11 +47,12 @@ function HTML({ headComponents, preBodyComponents, body, postBodyComponents }) {
           content="shapequest, android, mobile, game, fast-pased"
         />
         <title>ShapeQuest</title>
-        <link
-          href="https://fonts.googleapis.com/css?family=Quicksand"
-          rel="stylesheet"
-        />
         <link rel="shortcut icon" href={favicon} />
+        <meta property="og:title" content="ShapeQuest" />
+        <meta property="og:description" content="Fast-paced mobile action game" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://shapequest.site/" />
+        <meta property="og:image" content={ogImage} />
         {headComponents}
         {css}
       </head>

@@ -5,9 +5,15 @@ const StyledLink = styled.a`
   margin-left: 0.2rem;
 `;
 
+const Container = styled.div`
+  @media (min-width: 768px) {
+    padding-left: 10rem !important;
+  }
+`;
+
 function LicensesPage() {
   return (
-    <div className="container">
+    <Container className="container">
       <h1>Licenses</h1>
       <ul>
         <li>
@@ -71,7 +77,7 @@ function LicensesPage() {
           </StyledLink>
         </li>
       </ul>
-    </div>
+    </Container>
   );
 }
 
