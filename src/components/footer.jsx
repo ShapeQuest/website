@@ -5,7 +5,7 @@ import facebookLogo from "../../static/images/fb.png";
 function Footer() {
   return (
     <footer className="text-center">
-      ShapeQuest @2018 | theshapequest@gmail.com
+      ShapeQuest @2018 | wozappz@gmail.com
       <br /> Game developed by{" "}
       <a href="https://github.com/aleksanderwozniak">Aleksander Woźniak</a>
       <br /> Website created by{" "}

@@ -76,7 +76,6 @@ function PrivacyPolicty() {
       </p>
       <p>
         WozAppz<br />
-        wozappz@gmail.com
       </p>
     </div>
   );
