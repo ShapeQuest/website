@@ -1,14 +1,14 @@
 module.exports = {
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["react", "jsx-a11y", "import"],
-  "rules": {
+  extends: ["airbnb", "prettier"],
+  plugins: ["react", "jsx-a11y", "import"],
+  rules: {
     "linebreak-style": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
   },
-  "settings": {
-    "import/core-modules": []
+  settings: {
+    "import/core-modules": [],
   },
-  "env": {
-    "browser": true
-  }
-}
+  env: {
+    browser: true,
+  },
+};

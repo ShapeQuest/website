@@ -22,7 +22,7 @@ const propTypes = {
 
 function SkillIcon({ file, active, onClick }) {
   const src = `images/skills/${file}${active ? "2" : ""}.png`;
-  return <StyledSkillIcon onClick={onClick} src={src} />;
+  return <StyledSkillIcon onClick={onClick} src={src} alt={file} />;
 }
 
 SkillIcon.propTypes = propTypes;

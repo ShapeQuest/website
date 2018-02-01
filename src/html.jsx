@@ -49,7 +49,10 @@ function HTML({ headComponents, preBodyComponents, body, postBodyComponents }) {
         <title>ShapeQuest</title>
         <link rel="shortcut icon" href={favicon} />
         <meta property="og:title" content="ShapeQuest" />
-        <meta property="og:description" content="Fast-paced mobile action game" />
+        <meta
+          property="og:description"
+          content="Fast-paced mobile action game"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://shapequest.site/" />
         <meta property="og:image" content={ogImage} />

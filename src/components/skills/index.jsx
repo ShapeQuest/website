@@ -1,18 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import SkillIcon from "./skillIcon";
 import Video from "../video";
 import { OFFENSIVE, DEFENSIVE, SKILLS } from "../../data";
-
-const Name = styled.h4`
-  margin-top: 1rem;
-`;
-
-const GroupTitle = styled.p`
-  color: #2d74b2;
-  text-transform: uppercase;
-`;
 
 class Skills extends Component {
   state = {
@@ -63,16 +53,20 @@ class Skills extends Component {
       <div className="container text-center">
         <div>
           <Video id={video} title={name} />
-          <Name>{name}</Name>
+          <h1 style={{ marginTop: "1rem" }}>{name}</h1>
           <p>{description}</p>
         </div>
         <div className="columns">
           <div className="col-6">
-            <GroupTitle>{OFFENSIVE}</GroupTitle>
+            <p className="text-uppercase" style={{ color: "#2d74b2" }}>
+              {OFFENSIVE}
+            </p>
             {offensiveSkills}
           </div>
           <div className="col-6">
-            <GroupTitle>{DEFENSIVE}</GroupTitle>
+            <p className="text-uppercase" style={{ color: "#2d74b2" }}>
+              {DEFENSIVE}
+            </p>
             {defensiveSkills}
           </div>
         </div>

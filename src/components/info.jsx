@@ -1,13 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 
 import { INFO } from "../data";
-
-const StyledNumber = styled.h4`
-  color: #2d74b2;
-  font-size: 3rem;
-`;
 
 const propTypes = {
   number: PropTypes.string.isRequired,
@@ -18,7 +12,7 @@ const propTypes = {
 function Column({ number, title, description }) {
   return (
     <div className="column col-4 col-xs-12 col-sm-12 col-md-12">
-      <StyledNumber>{number}</StyledNumber>
+      <h4 style={{ color: "#2d74b2", fontSize: "3rem" }}>{number}</h4>
       <h3>{title}</h3>
       <p>{description}</p>
     </div>
